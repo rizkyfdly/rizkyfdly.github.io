@@ -34,7 +34,7 @@ header{
     padding:20px 8%;
     background:#000;
     border-bottom:1px solid #222;
-     z-index:9999;
+    z-index:9999;
 }
 
 .logo{
@@ -448,20 +448,49 @@ footer{
     color:#aaa;
 }
 
-/* Responsive */
+/* ===============================
+   RESPONSIVE MOBILE
+================================ */
 @media(max-width:768px){
+
+    /* ===== HEADER ===== */
     header{
         flex-direction:column;
-        gap:10px;
+        align-items:center;
+        padding:15px 5%;
+        gap:15px;
+    }
+
+    .logo{
+        font-size:18px;
+        text-align:center;
+    }
+
+    nav{
+        display:flex;
+        flex-direction:column; /* biar vertikal & rapi */
+        align-items:center;
+        gap:12px;
+        width:100%;
     }
 
     nav a{
-        margin:0 10px;
+        margin:0;
+        font-size:14px;
     }
 
+
+    /* ===== SECTION GENERAL ===== */
+    section{
+        padding:100px 6%;
+    }
+
+
+    /* ===== HOME ===== */
     .home-container{
         flex-direction:column;
         text-align:center;
+        gap:40px;
     }
 
     .home-text h1{
@@ -473,22 +502,40 @@ footer{
         height:220px;
     }
 
+
+    /* ===== ABOUT ===== */
     .about-container{
-    flex-direction:column;
-    text-align:center;
+        flex-direction:column;
+        text-align:center;
+        gap:40px;
     }
 
     .about-info{
         grid-template-columns:1fr;
     }
 
-    .project-card{
-    width:100%;
+
+    /* ===== PROJECT ===== */
+    .project-container{
+        flex-direction:column;
+        align-items:center;
     }
 
+    .project-card{
+        width:100%;
+    }
+
+
+    /* ===== SKILLS ===== */
+    .skills-container{
+        padding:0 5px;
+    }
+
+
+    /* ===== CONTACT ===== */
     .contact-container{
-    flex-direction:column;
-    gap:40px;
+        flex-direction:column;
+        gap:40px;
     }
 
     .contact-info{
@@ -501,6 +548,7 @@ footer{
         padding-left:0;
         padding-top:15px;
     }
+
 }
 </style>
 </head>
