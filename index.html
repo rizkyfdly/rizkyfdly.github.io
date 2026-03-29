@@ -67,7 +67,7 @@ nav a:hover::after{
 }
 
 section{
-    padding:120px 8%;
+    padding:90px 5%;
 }
 
 .home{
@@ -455,10 +455,10 @@ footer{
 
     /* ===== HEADER ===== */
     header{
-        flex-direction:column;
-        align-items:center;
-        padding:15px 5%;
-        gap:15px;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+    padding:12px 5%;
     }
 
     .logo{
@@ -468,15 +468,21 @@ footer{
 
     nav{
         display:flex;
-        flex-direction:column; /* biar vertikal & rapi */
+        flex-direction:row;
         align-items:center;
         gap:12px;
-        width:100%;
+        overflow-x:auto;
+        white-space:nowrap;
     }
 
     nav a{
         margin:0;
-        font-size:14px;
+        font-size:12px;
+        flex-shrink:0;
+    }
+
+    nav::-webkit-scrollbar{
+    display:none;
     }
 
 
@@ -535,10 +541,12 @@ footer{
     /* ===== CONTACT ===== */
     .contact-container{
         flex-direction:column;
-        gap:40px;
+        gap:30px;
+        align-items:center;
     }
 
     .contact-info{
+        width:100%;
         text-align:center;
     }
 
@@ -549,14 +557,27 @@ footer{
         padding-top:15px;
     }
 
-}
+    .contact-form{
+    width:100%;
+    }
+
+    .contact-form form{
+        width:100%;
+    }
+
+    form input,
+    form textarea{
+        width:100%;
+    }
+
+    }
 </style>
 </head>
 
 <body>
 
 <header>
-    <div class="logo">Rizky Julfadli</div>
+    <div class="logo">RizkyFdly</div>
     <nav>
         <a href="#home">Home</a>
         <a href="#about">About</a>
